@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "5be23167e54d818095e098413a0be0f5d408d3706bd903afe2f4c2ef6f3fcd2e"
+            "sha256": "0dc0110b2214293b3530518b68f217965cc38b259f04df36e86dad49829870db"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -15,7 +15,12 @@
             }
         ]
     },
-    "default": {},
+    "default": {
+        "distxml": {
+            "editable": true,
+            "path": "."
+        }
+    },
     "develop": {
         "atomicwrites": {
             "hashes": [
