@@ -4,16 +4,10 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-ray = {extras = ["debug"],version = "*"}
-parserator = "*"
-nose = "*"
-requests = "*"
-coverage = "*"
-flake8 = "*"
-faker = "*"
 pytest = "*"
 
 [packages]
+ray = {extras = ["debug"],version = "*"}
 distxml = {editable = true,path = "."}
 
 [requires]
