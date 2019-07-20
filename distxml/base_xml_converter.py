@@ -91,11 +91,11 @@ class BaseXMLConverter:
 
 
     def compile(self, sub_element_tag):
-        count = len(self.sub_elements)
         print("--------- Compiling ----------------------------")
         print("Converting queue to sub-elements")
         print("...")
         self._create_sub_element_list(sub_element_tag)
+        count = len(self.sub_elements)
         print("Extending root element with sub-elements!")
         print("...")
         self.root_element.extend(self.sub_elements)
