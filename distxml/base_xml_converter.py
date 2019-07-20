@@ -63,6 +63,15 @@ class BaseXMLConverter:
 
         return outer_element
 
+    def _create_sub_element_list(self, sub_element_tag):
+        sub_elements = []
+        for element_content in self.data:
+            cur_tag = sub_element_tag
+            cur_content = element_content
+            sub_element = self._create_sub_element(cur_tag, cur_content)
+            sub_elements.append(sub_element)
+        self.sub_elements = sub_elements
+
     def queue(self, data):
         err_message = (
             "Input data must be a python list of at least 1 dictionary objects"
@@ -81,9 +90,12 @@ class BaseXMLConverter:
         print("------------------------------------------------")
 
 
-    def compile(self):
+    def compile(self, sub_element_tag):
         count = len(self.sub_elements)
         print("--------- Compiling ----------------------------")
+        print("Converting queue to sub-elements")
+        print("...")
+        self._create_sub_element_list(sub_element_tag)
         print("Extending root element with sub-elements!")
         print("...")
         self.root_element.extend(self.sub_elements)

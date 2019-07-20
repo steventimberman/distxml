@@ -100,11 +100,10 @@ def test_create_sub_element_list(xml_tree, outer_element):
 
 def test_compile_and_string(xml_tree):
     xml_tree.data = DATA_CONTENT_MULTIPLE
-    xml_tree._create_sub_element_list("hellogoodbye")
 
-    assert len(xml_tree.sub_elements) == 2
+    assert len(xml_tree.data) == 2
 
-    xml_tree.compile()
+    xml_tree.compile("hellogoodbye")
 
     assert len(xml_tree.sub_elements) == 0
     assert xml_tree.data == [{}]

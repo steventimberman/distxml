@@ -5,9 +5,9 @@ verify_ssl = true
 
 [dev-packages]
 pytest = "*"
+twine = "*"
 
 [packages]
-ray = {extras = ["debug"],version = "*"}
 distxml = {editable = true,path = "."}
 
 [requires]

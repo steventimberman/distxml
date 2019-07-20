@@ -7,7 +7,9 @@ setup(
         name='distxml',
         version='0.0.1',
         description='Converts labeled data to xml format',
-        packages=find_packages(),
+        package_dir={'':'distxml'},
+        packages=find_packages('distxml'),
+        py_modules=["xml_converter"],
         classifiers=[
             "Programming Language :: Python :: 3",
             "License :: OSI Approved :: MIT License"
