@@ -1,4 +1,0 @@
-
-
-def iamanxmlfile():
-    print ("xmlfile!")
