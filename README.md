@@ -30,7 +30,7 @@ Now this data is queued in the XMLConverter object, but if you print
 `xml_con`, it will still write `<Hello />` to console.
 To solve this, you must compile the data.
 ```
-xml_con.compile()
+xml_con.compile("Greetings")
 ```
 Now if you print, the console will read
 ```
