@@ -17,4 +17,5 @@ setup(
         url="https://github.com/steventimberman/distxml",
         author="Steven Timberman",
         author_email="steventimberman@steventimberman.com",
+        install_requires=["ray"],
     )

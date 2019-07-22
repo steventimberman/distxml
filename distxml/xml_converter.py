@@ -36,7 +36,11 @@ class XMLConverter(BaseXMLConverter):
         Returns:
             xml.etree.ElementTree.Element -- The xml element
         """
-        return super()._create_innermost_element(tag, text)
+        element = ET.Element(tag)
+        if text:
+            element.text=text
+
+        return element
 
     def _create_sub_element(self, sub_element_tag, element_content):
         """ Creates a subelement
@@ -49,7 +53,17 @@ class XMLConverter(BaseXMLConverter):
                 element_content {dict} -- A dictionary of the elements contained in the sub-element. The keys are the tags of those
                 inner elements, and the values are the text within them.
         """
-        return super()._create_sub_element(sub_element_tag, element_content)
+        inner_elements = []
+        outer_element = ET.Element(sub_element_tag)
+
+        for inner_element_tag in element_content:
+            cur_tag = inner_element_tag
+            cur_text = element_content[cur_tag]
+            sub_element = self._create_innermost_element(cur_tag, cur_text)
+            inner_elements.append(sub_element)
+        outer_element.extend(inner_elements)
+
+        return outer_element
 
     def _create_sub_element_list(self, sub_element_tag):
         sub_elements = []
