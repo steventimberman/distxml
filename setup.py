@@ -5,11 +5,9 @@ with open("README.md", "r") as fh:
 
 setup(
         name='distxml',
-        version='0.0.1',
+        version='0.0.3',
         description='Converts labeled data to xml format',
-        package_dir={'':'distxml'},
-        packages=find_packages('distxml'),
-        py_modules=["xml_converter"],
+        py_modules=["distxml"],
         classifiers=[
             "Programming Language :: Python :: 3",
             "License :: OSI Approved :: MIT License"
