@@ -1,6 +1,6 @@
 from xml.etree import ElementTree as ET
 import ray
-from distxml.distxml.base_xml_converter import BaseXMLConverter
+from .base_xml_converter import BaseXMLConverter
 
 
 
