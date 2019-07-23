@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
         name='distxml',
-        version='0.1.0',
+        version='0.1.1',
         description='Converts labeled data to xml format',
         py_modules=["distxml"],
         classifiers=[
