@@ -46,15 +46,13 @@ distxml_con.compile("Greetings")
 ```
 Now if you print, the console will read
 ```
-<Hello><Greetings><start>Good morning</start><finish> Good night</finish></Greetings><Greetings><finish> Good evening</finish><start>Good morning again</start></Greetings></Hello>
+<Hello><Greetings><start>Good morning</start><finish>Good night</finish></Greetings><Greetings><finish>Good evening</finish><start>Good morning again</start></Greetings></Hello>
 ```
 Finally, to write to a file, just use
 ```
 distxml_con.write_to_file("filepath/file.xml")
 ```
 And there you go, a new xml file!
-
-
 
 **XMLConverter**
 
@@ -84,7 +82,7 @@ xml_con.compile("Greetings")
 ```
 Now if you print, the console will read
 ```
-<Hello><Greetings><start>Good morning</start><finish> Good night</finish></Greetings><Greetings><finish> Good evening</finish><start>Good morning again</start></Greetings></Hello>
+<Hello><Greetings><start>Good morning</start><finish>Good night</finish></Greetings><Greetings><finish>Good evening</finish><start>Good morning again</start></Greetings></Hello>
 ```
 Finally, to write to a file, just use
 ```
